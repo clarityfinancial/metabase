@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: metabase
+    name: clarity-metabase
     env: docker
     repo: https://github.com/render-examples/metabase.git # optional
-    plan: standard # ensure that metabase has at least 2GB of RAM (defaults to starter)
+    plan: standard
     autoDeploy: false
     envVars:
       - key: MB_DB_CONNECTION_URI
@@ -11,6 +11,7 @@ services:
           name: elephant
           property: connectionString
 databases:
-  - name: elephant
-    databaseName: metabasedb
+  - name: clarity-metabase-db
+    databaseName: clarity_metabase_db
+    plan: standard plus
     ipAllowList: [] # only allow internal connections
