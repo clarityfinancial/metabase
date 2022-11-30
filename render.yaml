@@ -2,7 +2,7 @@ services:
   - type: web
     name: clarity-metabase
     env: docker
-    repo: https://github.com/render-examples/metabase.git # optional
+    repo: https://github.com/clarityfinancial/metabase.git # optional
     plan: standard
     autoDeploy: false
     envVars:
