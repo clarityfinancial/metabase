@@ -8,7 +8,7 @@ services:
     envVars:
       - key: MB_DB_CONNECTION_URI
         fromDatabase:
-          name: elephant
+          name: clarity-metabase-db
           property: connectionString
 databases:
   - name: clarity-metabase-db
